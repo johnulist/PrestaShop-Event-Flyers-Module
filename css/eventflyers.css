@@ -1,0 +1,180 @@
+/*** Event flyers module Centering adds   ****/
+
+.block {
+    display: inline-block;
+    width: 100%;
+}
+
+#eventflyers-right p img, #eventflyers-left p img, #eventflyers-home p img {
+  float: left;              /* <<< For one row across */
+  border: 1px #CCC solid;   /* <<< Boader and Color - #CCC OR #C90 */
+  width: auto;
+}
+
+#eventflyers-home {
+  margin-top: 10px;
+}
+
+#eventflyers-home p {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 3px 10px 0;
+} 
+
+#eventTable-3 th span {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.fancybox-opened .fancybox-title { 
+    position:relative;
+    visibility: visible;                               
+    background-image: linear-gradient(to bottom, #F7B900, #CC9900);
+    -moz-background-image: linear-gradient(to bottom, #F7B900, #CC9900);
+    -webkit-background-image: linear-gradient(to bottom, #F7B900, #CC9900);
+    -o-background-image: linear-gradient(to bottom, #F7B900, #CC9900);
+    -ms-background-image: linear-gradient(to bottom, #F7B900, #CC9900);
+    line-height: 30px;
+    border-radius: 10px 10px 10px 10px;
+    border: 3px solid BLACK;            /* #CC9900  yellow=#FFFFBB */
+    width: 225px;
+    margin: 0 auto;
+}
+
+.fancybox-title:hover {
+    background-image: linear-gradient(to bottom, #CC9900, #F7B900);
+    -moz-background-image: linear-gradient(to bottom, #CC9900, #F7B900);
+    -webkit-background-image: linear-gradient(to bottom, #CC9900, #F7B900);
+    -o-background-image: linear-gradient(to bottom, #CC9900, #F7B900);
+    -ms-background-image: linear-gradient(to bottom, #CC9900, #F7B900);
+    background-image: linear-gradient(to bottom, #CC9900, #F7B900);
+    cursor: pointer;
+}
+
+.fancybox-title a {
+    display: block;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    color: #222222;
+    font-weight:bold;
+    /*text-shadow: 1px 1px 1px #383838;*/
+    text-shadow: 0px 0px 2px #EEEEEE;
+    text-decoration: none; /* Makes sure the link   doesn't get underlined */
+    z-index:10; /* raises anchor tag above everything else in div */
+    
+//    background-color:white;     /*workaround to make clickable in IE */
+//    opacity: 0;                 /*workaround to make clickable in IE */
+//    filter: alpha(opacity=1);   /*workaround to make clickable in IE */
+    
+}
+
+.fancybox-opened .fancybox-skin {
+    /*box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.5) !important;*/
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.5) !important;
+    border-radius: 10px;  /* Same as .fancybox-image */
+}   
+.fancybox-image {
+    border-radius: 10px;  /* Same as .fancybox-opened .fancybox-skin */   
+}
+
+.fancybox-title a span {
+    /*font-weight:bold;*/
+}
+
+/******************************************************************************/
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    cursor: default;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    z-index: 1;
+
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -ms-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+.popup {
+    background-color: #fff;
+    border: 3px solid #fff;
+    display: inline-block;
+    left: 50%;
+    opacity: 0;
+    padding: 15px;
+    position: fixed;
+    text-align: justify;
+    top: 40%;
+    visibility: hidden;
+    z-index: 10;
+
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px;
+
+    -webkit-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+    -moz-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+    -ms-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+    -o-box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+    box-shadow: 0 1px 1px 2px rgba(0, 0, 0, 0.4) inset;
+
+    -webkit-transition: opacity .5s, top .5s;
+    -moz-transition: opacity .5s, top .5s;
+    -ms-transition: opacity .5s, top .5s;
+    -o-transition: opacity .5s, top .5s;
+    transition: opacity .5s, top .5s;
+}
+.overlay:target+.popup {
+    top: 50%;
+    opacity: 1;
+    visibility: visible;
+}
+.close {
+    background-color: rgba(0, 0, 0, 0.8);
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    text-align: center;
+    text-decoration: none;
+    width: 30px;
+
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+}
+.close:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "X";
+    font-size: 24px;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+}
+.close:hover {
+    background-color: rgba(64, 128, 128, 0.8);
+}
+.popup p, .popup div {
+    margin-bottom: 10px;
+}
