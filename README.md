@@ -1,8 +1,9 @@
-PrestaShop-Event-Flyers-Module
+﻿PrestaShop-Event-Flyers-Module
 
 Event Flyers Module - Allows to upload multiple event flyers and and display them on your home page.
 
 Designed for PrestaShop™ 1.5.6.2
+Should work in future releases.
 
 Event Flyers Module - Allows to upload multiple event flyers and and display them on your home page.
 
